@@ -1,0 +1,4 @@
+Lada, MegaLadaTron, false, 9001, 120, 100, true, 0, 22, true, 32, 22, false, 32, 22, false, 32, 22, false, 000000000
+Board, Pocus, false, 1400, 80, 70, false, 32, 22, false, 32, 22, false, 32, 22, false, 32, 22, false, 184401833
+Bummer, B1Mini, true, 6400, 80, 70, false, 0, 24, true, 0, 24, true, 0, 24, true, 0, 24, true, 003201934
+Potato, PotatV13, false, 6400, 80, 70, false, 40, 2, false, 40, 2, false, 40, 2, false, 40, 2, false, 1993857

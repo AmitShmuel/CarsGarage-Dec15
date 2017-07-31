@@ -1,0 +1,55 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.8.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Garage.o Customer.o Car.o Engine.o Lights.o Wheels.o Menu.o FileParser.o LinkList.o
+LINKOBJ  = main.o Garage.o Customer.o Car.o Engine.o Lights.o Wheels.o Menu.o FileParser.o LinkList.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = CarClassNew.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Garage.o: Garage.cpp
+	$(CPP) -c Garage.cpp -o Garage.o $(CXXFLAGS)
+
+Customer.o: Customer.cpp
+	$(CPP) -c Customer.cpp -o Customer.o $(CXXFLAGS)
+
+Car.o: Car.cpp
+	$(CPP) -c Car.cpp -o Car.o $(CXXFLAGS)
+
+Engine.o: Engine.cpp
+	$(CPP) -c Engine.cpp -o Engine.o $(CXXFLAGS)
+
+Lights.o: Lights.cpp
+	$(CPP) -c Lights.cpp -o Lights.o $(CXXFLAGS)
+
+Wheels.o: Wheels.cpp
+	$(CPP) -c Wheels.cpp -o Wheels.o $(CXXFLAGS)
+
+Menu.o: Menu.cpp
+	$(CPP) -c Menu.cpp -o Menu.o $(CXXFLAGS)
+
+FileParser.o: FileParser.cpp
+	$(CPP) -c FileParser.cpp -o FileParser.o $(CXXFLAGS)
+
+LinkList.o: LinkList.cpp
+	$(CPP) -c LinkList.cpp -o LinkList.o $(CXXFLAGS)
